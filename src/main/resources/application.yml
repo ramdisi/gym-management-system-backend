@@ -3,3 +3,7 @@ spring:
     url: jdbc:mysql://localhost:3306/gym_management_system?createDatabaseIfNotExist=true
     username: root
     password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show_sql: true
