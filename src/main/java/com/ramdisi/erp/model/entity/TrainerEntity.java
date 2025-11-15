@@ -2,6 +2,7 @@ package com.ramdisi.erp.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,4 +25,6 @@ public class TrainerEntity {
     private String email;
     private LocalDate dob;
     private int experienceOfYears;
+    @ManyToOne
+    private AdminEntity admin;
 }

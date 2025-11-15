@@ -2,6 +2,7 @@ package com.ramdisi.erp.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,4 +18,6 @@ public class AdminEntity {
     private String id;
     private String name;
     private String email;
+    @OneToOne
+    private UserEntity user;
 }

@@ -1,7 +1,6 @@
 package com.ramdisi.erp.model.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,15 +9,15 @@ import lombok.ToString;
 
 import java.time.LocalDate;
 @Entity
-@AllArgsConstructor
+@ToString
 @Setter
 @Getter
-@ToString
-public class PaymentEntity {
-    @Id
+@AllArgsConstructor
+public class ScheduleEntity {
     private String id;
-    private double amount;
-    private LocalDate payDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private String description;
     @ManyToOne
-    private MemberEntity member;
+    private TrainerEntity trainer;
 }

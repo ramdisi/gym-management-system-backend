@@ -2,6 +2,8 @@ package com.ramdisi.erp.model.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,4 +26,10 @@ public class MemberEntity {
     private String phoneNumber;
     private Double registrationFee;
     private double subscription;
+    @OneToOne
+    private UserEntity user;
+    @OneToOne
+    private ScheduleEntity preferedSchedule;
+    @ManyToOne
+    private TrainerEntity preferedTrainer;
 }
